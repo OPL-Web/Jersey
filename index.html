@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jersey Timnas Indonesia 2026</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#fafafa;
+}
+
+header{
+background:#d80000;
+color:white;
+padding:60px 20px;
+text-align:center;
+}
+
+header h1{
+font-size:42px;
+margin:0;
+}
+
+header p{
+font-size:18px;
+opacity:0.9;
+}
+
+.hero{
+text-align:center;
+padding:50px 20px;
+background:white;
+}
+
+.hero img{
+width:320px;
+transition:0.3s;
+}
+
+.hero img:hover{
+transform:scale(1.05);
+}
+
+.price{
+font-size:38px;
+color:#d80000;
+font-weight:bold;
+}
+
+.old{
+text-decoration:line-through;
+color:gray;
+}
+
+.btn{
+background:#25D366;
+padding:16px 40px;
+color:white;
+text-decoration:none;
+font-size:20px;
+border-radius:10px;
+display:inline-block;
+margin-top:20px;
+}
+
+.section{
+padding:60px 20px;
+text-align:center;
+}
+
+.features{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.box{
+background:white;
+width:240px;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.box:hover{
+transform:translateY(-8px);
+}
+
+.gallery{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.gallery img{
+width:200px;
+border-radius:10px;
+}
+
+.countdown{
+font-size:28px;
+color:red;
+font-weight:bold;
+}
+
+footer{
+background:#111;
+color:white;
+padding:25px;
+text-align:center;
+}
+
+.wa-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-size:18px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>JERSEY TIMNAS INDONESIA 2026</h1>
+<p>Dukung Garuda Mendunia 🇮🇩</p>
+</header>
+
+<section class="hero">
+
+<img src="https://via.placeholder.com/320x380">
+
+<h2>Jersey Official Supporter</h2>
+
+<p class="old">Rp249.000</p>
+<p class="price">Rp149.000</p>
+
+<p>Bahan DryFit Premium • Adem • Ringan</p>
+
+<p>Promo Berakhir Dalam :</p>
+<p class="countdown" id="timer"></p>
+
+<a class="btn" href="https://wa.me/085890223872?text=Saya%20ingin%20pesan%20Jersey%20Timnas%202026">
+Pesan Sekarang
+</a>
+
+</section>
+
+<section class="section">
+
+<h2>Kenapa Harus Beli?</h2>
+
+<div class="features">
+
+<div class="box">
+<h3>Bahan Premium</h3>
+<p>DryFit adem cocok untuk olahraga</p>
+</div>
+
+<div class="box">
+<h3>Sablon Berkualitas</h3>
+<p>Tidak mudah retak dan tahan lama</p>
+</div>
+
+<div class="box">
+<h3>Ukuran Lengkap</h3>
+<p>S, M, L, XL, XXL</p>
+</div>
+
+<div class="box">
+<h3>Harga Promo</h3>
+<p>Kualitas bagus harga terjangkau</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Galeri Produk</h2>
+
+<div class="gallery">
+
+<img src="https://via.placeholder.com/200x240">
+<img src="https://via.placeholder.com/200x240">
+<img src="https://via.placeholder.com/200x240">
+<img src="https://via.placeholder.com/200x240">
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Testimoni</h2>
+
+<p>⭐⭐⭐⭐⭐ "Bahannya adem banget!"</p>
+<p>⭐⭐⭐⭐⭐ "Mirip jersey original!"</p>
+<p>⭐⭐⭐⭐⭐ "Pengiriman cepat!"</p>
+
+</section>
+
+<footer>
+<p>© 2026 Garuda Jersey Store</p>
+</footer>
+
+<a class="wa-float" href="https://wa.me/085890223872">Chat WhatsApp</a>
+
+<script>
+
+var countDownDate = new Date().getTime() + (24*60*60*1000);
+
+var x = setInterval(function() {
+
+var now = new Date().getTime();
+var distance = countDownDate - now;
+
+var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+document.getElementById("timer").innerHTML =
+hours + "j " + minutes + "m " + seconds + "d ";
+
+if (distance < 0) {
+clearInterval(x);
+document.getElementById("timer").innerHTML = "PROMO BERAKHIR";
+}
+
+}, 1000);
+
+</script>
+
+</body>
+</html>
